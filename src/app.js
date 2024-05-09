@@ -6,6 +6,9 @@ require("dotenv").config();
 const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 
+const doctor = require("./routes/doctor/index");
+app.use(doctor);
+
 app.get("/", (req, res) => {
     res.send("Expo Elite Server is Running");
   });
