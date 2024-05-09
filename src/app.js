@@ -13,7 +13,7 @@ const doctor = require("./routes/doctor/index");
 app.use(doctor);
 
 app.get("/", (req, res) => {
-    res.send("Expo Elite Server is Running");
+    res.send("Doctor Home Server is Running");
   });
   
   app.all("*", (req, res, next) => {
@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
   const main = async () => {
     await connectDB();
     app.listen(port, (req, res) => {
-      console.log(`Expo Elite Server running On Port: ${port}`);
+      console.log(`Doctor Home Server running On Port: ${port}`);
     });
   
   
